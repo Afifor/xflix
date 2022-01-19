@@ -37,16 +37,18 @@
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
     font-family: cursive;
+    flex-direction: column;
+    gap: 40px;
   }
 
-  .card:hover {
+  /* .card:hover {
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
   }
   .card:hover:before, .card:hover:after {
     animation: none;
     opacity: 0;
-  }
+  } */
 
 
   .card::before {
@@ -98,11 +100,11 @@
     margin-top: 2rem;
   }
 
-  form {
-    display: block;
-    margin: 1em 0em 1em 1em;
-    padding: 0.3em 0.3em 0.3em 0.3em;
-    width: 20em;
-    border: solid 3px #644f2a91;
-    border-radius: 4px;
+/* label {
+  color: blue;
+} */
+
+::placeholder {
+  color: blue;
+  text-align: center;
 }
