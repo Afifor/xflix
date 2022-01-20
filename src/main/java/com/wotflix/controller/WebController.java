@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class WebController {
 
-    @GetMapping("/")
+    @GetMapping("/login")
     public String protohome() {
 
-        return "pages/home";
+        return "pages/login";
     }
 
 
