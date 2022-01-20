@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
     <meta charset="UTF-8"/>
@@ -11,13 +12,32 @@
 </head>
 
 <body>
-<form class="card" th:action="@{/login}" method="POST">
-        <input type="text" name="username" placeholder="Username"/>
-        <input type="password" name="password" placeholder="Password"/>
-        <button type="submit" value="submit" class="btn btn-dark">log me</button>
-</form>
 
-<a href="" target="_blank"></a>
+  <div class="row align-items-center">
+    <img th:src="@{/img/clanflixlogo.png}" id="logo" alt="">
+  </div>
+
+<div class="row align-items-center">
+
+
+  <form class="card" th:action="@{/login}" method="POST">
+
+    <div th:if="${param.error}" class="info col-md-5">
+      <p>Invalid username or password</p>
+    </div>
+
+    <div th:if="${param.logout}" class="info col-md-5">
+      <p>You have been logged out!</p>
+    </div>
+
+    <input type="text" name="username" placeholder="Username"/>
+    <input type="password" name="password" placeholder="Password"/>
+    <button type="submit" value="submit" class="btn btn-dark">LOG ME</button>
+  </form>
+</div>
+
+
+
 </body>
 
 </html>
