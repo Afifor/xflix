@@ -10,25 +10,25 @@ import org.springframework.security.crypto.password.*;
 @EnableWebSecurity
 public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean
+   /* @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
+    TODO: uncomment this when the registration is done (can't figure out how to encode spring's base password with BCRYPT)
+*/
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login","/**/*.css","/**/*.js").permitAll()
-                .anyRequest().authenticated()
-                .and()
+                    .antMatchers("/login","/**/*.css","/**/*.js", "/**/*.png").permitAll()
+                    .anyRequest().authenticated()
+                    .and()
                 .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/home,", true)
-                .failureUrl("/login.html?error=true")
-                .and()
+                    .loginPage("/login")
+                    .defaultSuccessUrl("/home", true)
+                    .and()
                 .logout()
-                .logoutUrl("/perform_logout");
+                    .permitAll();
     }
 
 }
