@@ -22,6 +22,21 @@
     font-family: 'Roboto Condensed';
   }
 
+  a {
+    color: #8c58ee;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  a:hover {
+    color: #53318c;
+    font-size: 1.6rem;
+  }
+
+  #signupLink {
+    margin-top: 1vh;
+  }
+
 
   .card {
     background: #191c29;

@@ -2,13 +2,13 @@
 spring:
 
   application:
-    name: wotflix
+    name: clanflix
     #H2 Configuration
     h2.console.enabled: true
 
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wotflix
+    url: jdbc:mysql://localhost:3306/clanflix
     username: root
     password: pouledeau
 
@@ -18,7 +18,7 @@ spring:
 
 server:
   servlet:
-    context-path: /wotflix
+    context-path: /clanflix
 
 #Log level configuration
 logging:
