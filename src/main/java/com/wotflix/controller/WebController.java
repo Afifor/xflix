@@ -25,5 +25,10 @@ public class WebController {
         return "pages/home";
     }
 
+    @GetMapping("/signup")
+    public String usersignup() {
+        return "pages/signup";
+    }
+
 
 }
