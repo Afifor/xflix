@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta charset="UTF-8">
+    <title>Clanflix - Signup page</title>
+</head>
+<body>
+
+<header class="row align-items-center">
+    <img th:src="@{/img/clanflixlogo.png}" id="logo" alt=""/>
+</header>
+
+<div class="row align-items-center">
+    <form class="card" th:action="@{/login}" method="POST">
+        <label th:text="#{label.user.userName}">Username</label>
+        <input th:field="*{userName}"/>
+        <button type="submit" value="submit" class="btn btn-dark">LOG ME</button>
+    </form>
+</div>
+
+<a id="signupLink" href="clanflix/signup">Don't have an account ?</a>
+
+
+
+</body>
+
+</html>
